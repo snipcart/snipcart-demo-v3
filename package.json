@@ -1,0 +1,27 @@
+{
+  "name": "snipcart-demo-v3",
+  "version": "1.0.0",
+  "description": "Snipcart v3 demonstration store",
+  "author": "",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt-ts",
+    "build": "nuxt-ts build",
+    "generate": "nuxt-ts generate",
+    "start": "nuxt-ts start"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0",
+    "@nuxt/typescript-runtime": "^0.4.0"
+  },
+  "devDependencies": {
+    "@nuxt/typescript-build": "^0.6.0",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "autoprefixer": "^9.8.0",
+    "node-sass": "^4.14.1",
+    "postcss-hexrgba": "^2.0.1",
+    "postcss-nested": "^4.2.1",
+    "postcss-responsive-type": "^1.0.0",
+    "sass-loader": "^8.0.2"
+  }
+}
