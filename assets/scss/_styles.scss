@@ -146,6 +146,7 @@ body {
    */
   transform: translate3d(0px, 0px, 0px);
   display: flex;
+  flex-wrap: wrap;
 
   width: 100%;
   max-width: $layout--max-width;
@@ -160,8 +161,10 @@ body {
   }
 
   &__image {
-    object-fit: cover;
     width: 50%;
+    max-width: 500px;
+    max-height: 400px;
+    object-fit: cover;
     border-radius: $size--unit;
     transform: perspective(650px) rotateZ(5deg) rotateX(-2.5deg) rotateY(-15deg) scale(0.8) translateX(30px);
     box-shadow: 30px 30px 50px transparentize(darken($color--primary, 50%), 0.9);
