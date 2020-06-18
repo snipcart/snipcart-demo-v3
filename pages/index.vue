@@ -27,6 +27,11 @@ export default Vue.extend({
     Product,
     Footer
   },
+  head() {
+    return {
+      title: "ReplicaZone - Snipcart Demo"
+    };
+  },
   async asyncData({ route }) {
     return {
       products: Products
