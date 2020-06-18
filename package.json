@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.6.0",
+    "@nuxtjs/sentry": "^4.1.2",
     "@nuxtjs/style-resources": "^1.0.0",
     "autoprefixer": "^9.8.0",
     "node-sass": "^4.14.1",

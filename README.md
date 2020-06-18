@@ -1,7 +1,5 @@
 # Snipcart v3 demonstration store
 
-> Snipcart v3 demonstration store
-
 ## Build Setup
 
 ```bash

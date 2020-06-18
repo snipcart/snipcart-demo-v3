@@ -9,7 +9,7 @@
         <a href="https://www.facebook.com/Snipcart/">
           <Facebook class="footer__icon" />
         </a>
-        <a href="https://github.com/snipcart/snipcart-v3-demo-store">
+        <a href="https://github.com/snipcart/snipcart-demo-v3">
           <Github class="footer__icon" />
         </a>
       </div>
