@@ -176,7 +176,10 @@ body {
 
   &__summary {
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 75px 175px;
+    @include small {
+      grid-template-columns: 20% 80%;
+    }
     grid-gap: $size--unit * 2;
     border-radius: 4px;
   }
@@ -194,7 +197,12 @@ body {
     width: 100%;
     border: 1px solid $color--light-accent;
     padding: $size--unit;
+    padding-left: $size--unit * 2;
     border-radius: 4px;
+  }
+
+  option {
+    text-align: center;
   }
 
   &__definition {
