@@ -31,7 +31,7 @@ const Products: Product[] = [
       physical: 49.95,
       digital: 29.75
     },
-    description: "The title Rosy-Fingered Dawn at Louse Point refers to one of Willem de Kooning's favourite places in Long Island, New York. During his period in Long Island De Kooning rode his bike daily to Louse Point where he observed the water.",
+    description: "The title Rosy-Fingered Dawn at Louse Point refers to one of Willem de Kooning's favourite places in Long Island.",
     image: "/images/rosy.jpg",
     fileGuid: "98dbd416-159d-4f76-8a59-30703cf6189f"
   },
