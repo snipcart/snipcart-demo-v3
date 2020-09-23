@@ -28,13 +28,14 @@ export default {
       {
         rel: "stylesheet",
         href: "https://cdn.snipcart.com/themes/v3.0/default/snipcart.css",
-        defer: "defer"
+        defer: true
       },
     ],
     script: [
       { 
         src: "https://cdn.snipcart.com/themes/v3.0/default/snipcart.js", 
-        defer: "defer", },
+        defer: true, 
+      },
     ],
   },
   /*
