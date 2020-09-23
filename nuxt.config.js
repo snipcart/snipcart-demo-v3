@@ -17,6 +17,7 @@ export default {
     link: [
       { rel: "preconnect", href: "https://app.snipcart.com" },
       { rel: "preconnect", href: "https://cdn.snipcart.com" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com/css?family=Muli:400,700&display=swap" },
       { rel: "icon", type: "image/png", href: "/favicon.png" },
       {
         rel: "stylesheet",
