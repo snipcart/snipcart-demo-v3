@@ -15,6 +15,8 @@ export default {
       },
     ],
     link: [
+      { rel: "preconnect", href: "https://app.snipcart.com" },
+      { rel: "preconnect", href: "https://cdn.snipcart.com" },
       { rel: "icon", type: "image/png", href: "/favicon.png" },
       {
         rel: "stylesheet",
@@ -26,10 +28,13 @@ export default {
       {
         rel: "stylesheet",
         href: "https://cdn.snipcart.com/themes/v3.0/default/snipcart.css",
+        defer: "defer"
       },
     ],
     script: [
-      { src: "https://cdn.snipcart.com/themes/v3.0/default/snipcart.js" },
+      { 
+        src: "https://cdn.snipcart.com/themes/v3.0/default/snipcart.js", 
+        defer: "defer", },
     ],
   },
   /*
