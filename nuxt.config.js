@@ -62,7 +62,20 @@ export default {
   */
   modules: [
     "@nuxtjs/sentry",
+    "@nuxtjs/google-gtag"
   ],
+  "google-gtag": {
+    id: "G-FF1GKM9QVT",
+    config: {
+      anonymize_ip: true,
+      send_page_view: false,
+      linker: {
+        domains: ["demo.snipcart.com"]
+      }
+    },
+    debug: false,
+    disableAutoPageTrack: false
+  },
   /*
   ** Sentry configuration
   */
