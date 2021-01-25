@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^0.4.0",
-    "@nuxtjs/google-gtag": "^1.0.4",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
