@@ -3,56 +3,17 @@
     <img class="product__image" :src="data.image" alt />
     <div class="product__content">
       <h2 class="product__title">{{data.name}}</h2>
-      <p class="product__description">{{data.description}}</p>
-      <div class="product__summary">
-        <div>
-          <label for="quantity">QUANTITY</label>
-          <input
-            type="number"
-            name="quantity"
-            id="quantity"
-            value="1"
-            min="1"
-            @change="changeQuantity"
-          />
-        </div>
-        <div>
-          <label for="format">FORMAT</label>
-          <select name="format" id="format" @change="changeFormat">
-            <option value="physical">Physical copy</option>
-            <option value="digital">Digital copy (.jpg)</option>
-          </select>
-        </div>
-        <div class="product__price">${{(quantity * data.prices[format]).toFixed(2)}}</div>
-        <button
-          :class="'product__button snipcart-add-item ' + physicalButtonClasses"
-          :data-item-id="data.id"
-          :data-item-price="data.prices.physical"
-          data-item-url="https://demo.snipcart.com/"
-          :data-item-description="data.description"
-          :data-item-image="data.image"
-          :data-item-name="data.name"
-          :data-item-quantity="quantity"
-        >Add to cart</button>
-        <button
-          :class="'product__button snipcart-add-item ' + digitalButtonClasses"
-          :data-item-id="`${data.id}-digital`"
-          :data-item-price="data.prices.digital"
-          data-item-url="https://demo.snipcart.com/"
-          :data-item-description="data.description"
-          :data-item-image="data.image"
-          :data-item-name="`${data.name} (.jpg)`"
-          :data-item-quantity="quantity"
-          :data-item-file-guid="data.fileGuid"
-        >Add to cart</button>
-      </div>
+      <p class="product__description">{{data.description}}</p>     
+      <product-buy-button :product="data" v-if="!hasPlans"></product-buy-button>
+      <subscription-buy-button :product="data" v-else></subscription-buy-button>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import { ProductPrices, Product } from "../assets/products";
+import ProductBuyButton from './ProductBuyButton.vue';
+import SubscriptionBuyButton from './SubscriptionBuyButton.vue';
 
 enum Format {
   Physical = "physical",
@@ -60,6 +21,7 @@ enum Format {
 }
 
 export default Vue.extend({
+  components: { ProductBuyButton, SubscriptionBuyButton },
   data: function() {
     return {
       quantity: 1,
@@ -80,6 +42,9 @@ export default Vue.extend({
     },
     digitalButtonClasses(): string {
       return this.format === Format.Digital ? "" : "product__button--hide";
+    },
+    hasPlans(): boolean {
+      return this.data.plans.length > 0;
     }
   },
   props: ["data"]

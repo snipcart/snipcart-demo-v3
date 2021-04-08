@@ -138,6 +138,7 @@ body {
   }
 }
 
+
 // Product component
 .product {
   /**
@@ -245,6 +246,7 @@ body {
     align-items: center;
     font-weight: bold;
     font-size: $size--unit * 2.5;
+    white-space: nowrap;;
   }
 
   @include large {
@@ -317,5 +319,16 @@ body {
       transition: 0.2s all;
       fill: $color--secondary;
     }
+  }
+}
+
+
+.subscription {
+  &__price {
+    font-weight: bold;
+    font-size: $size--unit * 2.5;
+    white-space: nowrap;;
+    margin-right: $size--unit;
+    padding-bottom: $size--unit * 2;
   }
 }
