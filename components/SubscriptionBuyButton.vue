@@ -12,7 +12,7 @@
             :data-item-description="product.description"
             :data-item-image="product.image"
             :data-item-name="product.name"
-            v-bind="planAttributes"
+            v-bind="planData"
             >Subscribe
         </button>
 </div>
@@ -50,25 +50,31 @@ export default Vue.extend({
                     return 'month';
             }
         },
-        planAttributes(): {[key: string]: any} {
+        planData(): {[key: string]: any} {
             return this.product.plans
-            .map((plan, index) => {
-                const i = index+1;
+                .map((plan, index) => {
+                    const i = index+1;
 
-                const attributes = {
-                    [`data-plan${i}-name`]: plan.name,
-                    [`data-plan${i}-id`]: plan.id,
-                    [`data-plan${i}-frequency`]: plan.frequency,
-                    [`data-plan${i}-interval`]: plan.interval,
-                    [`data-item-plan${i}-price`]: plan.price,
-                }
+                    const attributes = {
+                        [`data-plan${i}-name`]: plan.name,
+                        [`data-plan${i}-id`]: plan.id,
+                        [`data-plan${i}-frequency`]: plan.frequency,
+                        [`data-plan${i}-interval`]: plan.interval,
+                        [`data-item-plan${i}-price`]: plan.price,
+                    }
 
-                if (index == 0) {
-                    attributes['data-item-selected-plan'] = plan.id;
-                }
+                    if (index == 0) {
+                        attributes['data-item-selected-plan'] = plan.id;
+                    }
 
-                return attributes;
-            });
+                    return attributes;
+                })
+                .reduce((acc, plan) => {
+                    return {
+                        ...acc,
+                        ...plan
+                    };
+                }, {});
         }
     }
 })
