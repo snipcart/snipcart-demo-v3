@@ -236,7 +236,7 @@ body {
       transition: 0.2s all;
       transform: translateY(-2px);
       box-shadow: 0px 2px 10px transparentize(darken($color--primary, 3%), 0.5);
-      background-color: darken($color--primary, 10%);
+      background-color: $color--primary-hover;
     }
   }
 
