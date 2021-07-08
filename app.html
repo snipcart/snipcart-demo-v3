@@ -13,6 +13,18 @@
     
       gtag('config', 'G-FF1GKM9QVT');
     </script>
+    <script>
+      window.toggleDarkMode = function(isDarkMode){
+        const body = document.querySelector('body')
+        window.localStorage.setItem('isDarkMode', isDarkMode)
+        if(isDarkMode){
+          body.classList.add('dark-mode')
+        }else{
+          body.classList.remove('dark-mode')
+        }
+      }
+      window.toggleDarkMode(window.localStorage.getItem('isDarkMode') == null || window.localStorage.getItem('isDarkMode') == "false" ? false: true)
+    </script>
     {{ APP }}
   </body>
 </html>

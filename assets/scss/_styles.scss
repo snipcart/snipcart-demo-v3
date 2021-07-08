@@ -138,7 +138,6 @@ body {
   }
 }
 
-
 // Product component
 .product {
   /**
@@ -246,7 +245,7 @@ body {
     align-items: center;
     font-weight: bold;
     font-size: $size--unit * 2.5;
-    white-space: nowrap;;
+    white-space: nowrap;
   }
 
   @include large {
@@ -322,13 +321,289 @@ body {
   }
 }
 
-
 .subscription {
   &__price {
     font-weight: bold;
     font-size: $size--unit * 2.5;
-    white-space: nowrap;;
+    white-space: nowrap;
     margin-right: $size--unit;
     padding-bottom: $size--unit * 2;
   }
+}
+
+.dark-mode {
+  #snipcart {
+    /* ----------------- 
+        Colors
+    ----------------- */
+    --color-default: hsl(0, 0%, 90%);
+    --color-alt: hsl(0, 0%, 50%);
+    --color-icon: hsl(200, 90%, 40%);
+    --color-success: hsl(144, 50%, 55%);
+    --color-error: hsl(6, 55%, 60%);
+
+    --color-link: hsl(220, 70%, 55%);
+    --color-link-hover: hsl(220, 70%, 65%);
+    --color-link-active: var(--color-link);
+    --color-link-focus: var(--color-link);
+
+    --color-input: var(--color-default);
+    --color-input-hover: var(--color-input);
+    --color-input-focus: var(--color-input);
+    --color-input-checked: var(--color-input);
+    --color-input-disabled: var(--color-alt);
+    --color-input-error: var(--color-error);
+    --color-inputLabel: var(--color-default);
+    --color-inputLabel-hover: var(--color-inputLabel);
+    --color-inputLabel-focus: var(--color-inputLabel);
+    --color-inputIcon: var(--color-alt);
+    --color-inputIcon-hover: var(--color-default);
+    --color-inputIcon-focus: var(--color-inputIcon);
+    --color-inputIcon-checked: var(--color-default);
+    --color-inputIcon-error: var(--color-error);
+    --color-inputPlaceholder: var(--color-alt);
+
+    --color-buttonPrimary: var(--color-default);
+    --color-buttonPrimary-hover: hsl(0, 0%, 100%);
+    --color-buttonPrimary-active: var(--color-buttonPrimary);
+    --color-buttonPrimary-focus: var(--color-buttonPrimary);
+    --color-buttonPrimary-disabled: var(--color-alt);
+    --color-buttonPrimary-success: var(--color-buttonPrimary);
+    --color-buttonPrimary-error: var(--color-buttonPrimary);
+
+    --color-buttonSecondary: var(--color-icon);
+    --color-buttonSecondary-hover: hsl(200, 90%, 50%);
+    --color-buttonSecondary-active: var(--color-buttonSecondary);
+    --color-buttonSecondary-focus: var(--color-buttonSecondary);
+    --color-buttonSecondary-disabled: hsl(210, 10%, 25%);
+    --color-buttonSecondary-success: var(--color-success);
+    --color-buttonSecondary-error: var(--color-error);
+
+    --color-buttonDanger: var(--color-error);
+    --color-buttonDanger-hover: hsl(6, 55%, 70%);
+    --color-buttonDanger-active: var(--color-buttonDanger);
+    --color-buttonDanger-focus: var(--color-buttonDanger);
+    --color-buttonDanger-disabled: hsl(210, 10%, 25%);
+    --color-buttonDanger-success: var(--color-default);
+    --color-buttonDanger-error: var(--color-default);
+
+    --color-badge: var(--color-link);
+    --color-badge-active: var(--color-link);
+    --color-badge-disabled: var(--color-alt);
+
+    /* ----------------- 
+        Border colors
+    ----------------- */
+    --borderColor-default: hsla(0, 0%, 100%, 10%);
+    --borderColor-error: hsl(6, 55%, 30%);
+
+    --borderColor-link: currentColor;
+    --borderColor-link-hover: currentColor;
+    --borderColor-link-active: currentColor;
+    --borderColor-link-focus: currentColor;
+
+    --borderColor-input: hsla(0, 0%, 100%, 10%);
+    --borderColor-input-hover: hsl(200, 90%, 40%);
+    --borderColor-input-focus: var(--borderColor-input-hover);
+    --borderColor-input-checked: var(--borderColor-input-hover);
+    --borderColor-input-disabled: hsl(210, 10%, 20%);
+    --borderColor-input-error: var(--borderColor-error);
+
+    --borderColor-buttonPrimary: transparent;
+    --borderColor-buttonPrimary-hover: transparent;
+    --borderColor-buttonPrimary-focus: transparent;
+    --borderColor-buttonPrimary-disabled: transparent;
+    --borderColor-buttonPrimary-success: transparent;
+    --borderColor-buttonPrimary-error: transparent;
+
+    --borderColor-buttonSecondary: transparent;
+    --borderColor-buttonSecondary-hover: transparent;
+    --borderColor-buttonSecondary-focus: transparent;
+    --borderColor-buttonSecondary-disabled: transparent;
+    --borderColor-buttonSecondary-success: transparent;
+    --borderColor-buttonSecondary-error: transparent;
+
+    --borderColor-badge: transparent;
+    --borderColor-badge-active: transparent;
+    --borderColor-badge-disabled: transparent;
+
+    /* ----------------- 
+        Background colors
+    ----------------- */
+    --bgColor-default: hsl(210, 10%, 11%);
+    --bgColor-alt: hsl(210, 10%, 9%);
+    --bgColor-success: hsl(144, 70%, 15%);
+    --bgColor-error: hsl(6, 50%, 15%);
+    --bgColor-info: hsl(210, 55%, 15%);
+
+    --bgColor-modal: hsl(210, 10%, 7%);
+    --bgColor-modalVeil: hsla(210, 10%, 7%, 0.75);
+
+    --bgColor-link: none;
+    --bgColor-link-hover: none;
+    --bgColor-link-active: none;
+    --bgColor-link-focus: hsl(210, 55%, 10%);
+
+    --bgColor-input: hsl(210, 10%, 10%);
+    --bgColor-input-hover: var(--bgColor-input);
+    --bgColor-input-focus: var(--bgColor-input);
+    --bgColor-input-checked: var(--borderColor-input-hover);
+    --bgColor-input-disabled: hsl(210, 10%, 14%);
+    --bgColor-input-error: var(--bgColor-input);
+    --bgColor-input-autofill: hsl(210, 60%, 15%);
+
+    --bgColor-buttonPrimary: hsl(220, 70%, 22%);
+    --bgColor-buttonPrimary-hover: hsl(220, 70%, 30%);
+    --bgColor-buttonPrimary-active: var(--bgColor-buttonPrimary);
+    --bgColor-buttonPrimary-focus: var(--bgColor-buttonPrimary);
+    --bgColor-buttonPrimary-disabled: hsl(210, 10%, 25%);
+    --bgColor-buttonPrimary-success: hsl(144, 66%, 30%);
+    --bgColor-buttonPrimary-error: hsl(6, 60%, 35%);
+
+    --bgColor-buttonSecondary: var(--bgColor-info);
+    --bgColor-buttonSecondary-hover: hsl(210, 60%, 18%);
+    --bgColor-buttonSecondary-active: var(--bgColor-buttonSecondary);
+    --bgColor-buttonSecondary-focus: var(--bgColor-buttonSecondary);
+    --bgColor-buttonSecondary-disabled: hsl(210, 10%, 9%);
+    --bgColor-buttonSecondary-success: var(--bgColor-success);
+    --bgColor-buttonSecondary-error: var(--bgColor-error);
+
+    --bgColor-buttonDanger: var(--bgColor-error);
+    --bgColor-buttonDanger-hover: hsl(6, 50%, 18%);
+    --bgColor-buttonDanger-active: var(--bgColor-buttonDanger);
+    --bgColor-buttonDanger-focus: var(--bgColor-buttonDanger);
+    --bgColor-buttonDanger-disabled: hsl(210, 10%, 9%);
+    --bgColor-buttonDanger-success: hsl(144, 66%, 30%);
+    --bgColor-buttonDanger-error: hsl(6, 60%, 35%);
+
+    --bgColor-badge: hsl(210, 55%, 10%);
+    --bgColor-badge-active: hsl(210, 60%, 15%);
+    --bgColor-badge-disabled: hsl(210, 10%, 11%);
+
+    /* ----------------- 
+        Shadows
+    ----------------- */
+
+    --shadow-default: 0px 20px 24px -20px hsla(0, 0%, 0%, 0.5);
+    --shadow-tooltip: 0px 8px 16px hsla(220, 70%, 22%, 0.5);
+
+    --shadow-link-focus: 0px 6px 4px -3px hsla(200, 90%, 40%, 0.5);
+
+    --shadow-input-hover: none;
+    --shadow-input-focus: 0px 5px 10px -3px hsla(200, 90%, 40%, 0.3);
+    --shadow-input-checked: none;
+
+    --shadow-buttonPrimary-hover: 0px 10px 4px -8px hsla(0, 0%, 0%, 0.5);
+    --shadow-buttonPrimary-active: none;
+    --shadow-buttonPrimary-focus: 0px 0px 6px 2px hsl(200, 90%, 40%);
+
+    --shadow-buttonSecondary-hover: 0px 10px 4px -8px hsla(0, 0%, 0%, 0.2);
+    --shadow-buttonSecondary-active: none;
+    --shadow-buttonSecondary-focus: 0px 0px 6px 2px hsla(200, 90%, 40%, 0.8);
+
+    --shadow-buttonDanger-hover: 0px 10px 4px -8px hsla(0, 0%, 0%, 0.25);
+    --shadow-buttonDanger-active: none;
+    --shadow-buttonDanger-focus: 0px 0px 6px 2px hsla(6, 55%, 60%);
+  }
+
+  background-color: rgb(16, 18, 20);
+  color: hsl(0, 0%, 90%);
+  .header{
+    border-bottom-color: rgba(255,255,255,0.1);
+  }
+  .notice {
+    background-color: rgba(255,255,255,0.7);
+    &__content, &__link{
+      color: hsl(210, 10%, 11%);
+    }
+  }
+  .product input, .product select{
+    background-color: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.2);
+    color: white;
+  }
+
+  .footer{
+    background-color: rgb(16, 18, 20);
+    border-color: rgba(255,255,255,0.1);
+    .footer__icon{
+      fill: rgba(255,255,255,0.8);
+    }
+  }
+  .header__button{
+    color: white;
+  }
+
+}
+
+
+.toggle {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  .before,
+  .after {
+    position: absolute;
+    z-index: 1;
+    height: 22px;
+    width: auto;
+    top: 5px;
+    color: #f6e770;
+  }
+  .before{
+    left: 4px;
+  }
+  .after{
+    right: 4px;
+  }
+}
+.toggle-switch {
+  display: inline-block;
+  background: rgba(0,0,0,0.8);
+  border-radius: 16px;
+  width: 58px;
+  height: 32px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+  &:before,
+  &:after {
+    content: "";
+  }
+  &:before {
+    z-index: 10;
+    display: block;
+    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: left 0.25s;
+  }
+  .toggle:hover &:before {
+    background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+  }
+  .toggle-checkbox:checked + & {
+    background: rgba(255, 255, 255, 0.2);
+    &:before {
+      left: 30px;
+    }
+  }
+}
+.toggle-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+.toggle-label {
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+}
+
+*{
+  transition: background-color ease-in-out 0.2s;
 }
