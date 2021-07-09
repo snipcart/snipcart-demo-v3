@@ -25,18 +25,21 @@ export default Vue.extend({
     Header,
     Notice,
     Product,
-    Footer
+    Footer,
   },
   head() {
     return {
-      title: "ReplicaZone - Snipcart Demo"
+      title: "ReplicaZone - Snipcart Demo",
     };
   },
   async asyncData({ route }) {
     return {
-      products: Products
+      products: Products,
     };
-  }
+  },
 });
 </script>
 
+<style lang="scss">
+
+</style>
