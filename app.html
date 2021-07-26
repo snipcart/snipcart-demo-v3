@@ -14,16 +14,38 @@
       gtag('config', 'G-FF1GKM9QVT');
     </script>
     <script>
-      window.toggleDarkMode = function(isDarkMode){
-        const body = document.querySelector('body')
-        window.localStorage.setItem('isDarkMode', isDarkMode)
-        if(isDarkMode){
-          body.classList.add('dark-mode')
-        }else{
-          body.classList.remove('dark-mode')
+      document.addEventListener('snipcart.ready', () => {
+        window.toggleDarkMode = function(isDarkMode){
+          const body = document.querySelector('body')
+          window.localStorage.setItem('isDarkMode', isDarkMode)
+          const lightModeColors = {
+            input: {
+              color: '#2e3338'
+            },
+            label: {
+              color: '#2e3338'
+            }
+          };
+
+          const darkModeColors = {
+            input: {
+              color: '#e6e6e6'
+            },
+            label: {
+              color: '#e6e6e6'
+            }
+          };
+
+          if(isDarkMode){
+            body.classList.add('dark-mode')
+            Snipcart.api.theme.customization.registerPaymentFormCustomization(darkModeColors);
+          }else{
+            body.classList.remove('dark-mode')
+            Snipcart.api.theme.customization.registerPaymentFormCustomization(lightModeColors);
+          }
         }
-      }
-      window.toggleDarkMode(window.localStorage.getItem('isDarkMode') == null || window.localStorage.getItem('isDarkMode') == "false" ? false: true)
+        window.toggleDarkMode(window.localStorage.getItem('isDarkMode') == null || window.localStorage.getItem('isDarkMode') == "false" ? false: true)
+      });
     </script>
     {{ APP }}
   </body>
