@@ -50,7 +50,7 @@
         </label>
         <button class="header__button header__account snipcart-customer-signin">
           <div class="header__button-text">
-            {{ loggedIn ? "My account" : "Sign In" }}
+            {{ loggedIn ? $t('my_account') : $t('login') }}
           </div>
         </button>
         <button class="header__button header__checkout snipcart-checkout">

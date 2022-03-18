@@ -1,3 +1,5 @@
+import messages from './translations'
+
 export default {
   mode: "universal",
   /*
@@ -61,8 +63,23 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    "@nuxtjs/sentry"
+    "@nuxtjs/sentry",
+    "@nuxtjs/i18n"
   ],
+  i18n: {
+    locales: ['en', 'fr'],
+    defaultLocale: 'en',
+    strategy: 'prefix_except_default',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      onlyOnRoot: true,
+    },
+    vueI18n: {
+      fallbackLocale: 'en',
+      messages,
+    },
+  },
   /*
   ** Sentry configuration
   */

@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <div class="footer__container">
-      <div class="footer__copy">Nuxt.js static site with Snipcart e-commerce.</div>
+      <div class="footer__copy">{{$t('footer_text')}}</div>
       <div class="footer__socials">
         <a href="https://twitter.com/snipcart">
           <Twitter class="footer__icon" />

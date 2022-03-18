@@ -1,7 +1,7 @@
 <template>
   <div class="index">
-    <Notice title="Snipcart-powered demo store." />
-    <Header title="ReplicaZone" />
+    <Notice :title="$t('notice')" />
+    <Header :title="$t('title')" />
     <div class="index__gallery">
       <template v-for="(product, index) in products">
         <Product :data="product" :key="index" />
@@ -13,12 +13,14 @@
 
 <script lang="ts">
 import Vue from "vue";
+import i18n from 'vue-i18n';
 import Header from "~/components/Header.vue";
 import Notice from "~/components/Notice.vue";
 import Product from "~/components/Product.vue";
 import Footer from "~/components/Footer.vue";
 
-import Products from "~/assets/products.ts";
+import Products from "~/assets/products";
+import ProductsFr from "~/assets/products-fr";
 
 export default Vue.extend({
   components: {
@@ -29,14 +31,18 @@ export default Vue.extend({
   },
   head() {
     return {
-      title: "ReplicaZone - Snipcart Demo",
+      title: this.$i18n.t('full_title').toString()
     };
   },
-  async asyncData({ route }) {
+  async asyncData() {
     return {
-      products: Products,
+      products: {}
     };
   },
+
+  mounted() {
+    this.$data.products = this.$i18n.locale == 'fr' ? ProductsFr : Products
+  }
 });
 </script>
 

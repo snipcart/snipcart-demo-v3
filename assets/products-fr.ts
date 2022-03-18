@@ -24,36 +24,36 @@ export interface ProductPrices {
 const Products: Product[] = [
   {
     id: "demo-starry-night",
-    name: "Starry Night",
+    name: "Nuit étoilée",
     prices: {
       physical: 79.95,
       digital: 29.75
     },
-    description: "High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh.",
+    description: "Réplique d'excellente qualité de La Nuit Étoilée par le paintre Vincent van Gogh.",
     image: "/images/starry-night.jpg",
     fileGuid: "09e589c7-3d18-4c2e-9cee-4f447e9f054a",
     plans: [],
   },
   {
     id: "demo-magazine-subscription",
-    name: "Magazine subscription",
+    name: "Abonnement au magazine",
     prices: {
       physical: 10.00,
       digital: 0,
     },
-    description: "Subscribe to our painter's magazine. You can opt-in for a weekly or monthly subscription.",
+    description: "Abonnez-vous à notre magazine pour paintres. Un abonnement hebdomadaire ou mensuel est disponible.",
     image: "/images/painting.jpg",
     plans: [{
       frequency: 'monthly',
       id: 'magazine-monthly-plan',
       interval: 1,
-      name: 'Monthly subscription',
+      name: 'Abonnement mensuel',
       price: 20
     },{
       frequency: 'weekly',
       id: 'magazine-weekly-plan',
       interval: 1,
-      name: 'Weekly subscription',
+      name: 'Abonnement hebdomadaire',
       price: 10
     }],
   },
@@ -64,7 +64,7 @@ const Products: Product[] = [
       physical: 49.95,
       digital: 29.75
     },
-    description: "The title Rosy-Fingered Dawn at Louse Point refers to one of Willem de Kooning's favourite places in Long Island.",
+    description: "Le titre Rosy-Fingered Dawn at Louse Point réfère à un des endroits préférés de Willem de Kooning's à Long Island.",
     image: "/images/rosy.jpg",
     fileGuid: "98dbd416-159d-4f76-8a59-30703cf6189f",
     plans: [],
@@ -76,7 +76,7 @@ const Products: Product[] = [
       physical: 65.95,
       digital: 29.75
     },
-    description: "Irises is yet again, another painting by the Dutch artist Vincent van Gogh.",
+    description: "Irises est, encore une fois, une peinture de Vincent van Gogh.",
     image: "/images/irises.jpg",
     fileGuid: "66edfe7f-0851-4418-93e8-785975df7318",
     plans: [],
@@ -88,7 +88,7 @@ const Products: Product[] = [
       physical: 99.95,
       digital: 29.75
     },
-    description: "Branches with Almond Blossom is another van Gogh painted in 1890.",
+    description: "Branches with Almond Blossom est un autre van Gogh peint en 1890.",
     image: "/images/almond.jpg",
     fileGuid: "79b1504d-9127-4e7f-bcdb-dff84a337775",
     plans: [],
