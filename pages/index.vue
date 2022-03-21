@@ -19,7 +19,7 @@ import Notice from "~/components/Notice.vue";
 import Product from "~/components/Product.vue";
 import Footer from "~/components/Footer.vue";
 
-import Products from "~/assets/products";
+import ProductsEn from "~/assets/products-en";
 import ProductsFr from "~/assets/products-fr";
 
 export default Vue.extend({
@@ -34,15 +34,11 @@ export default Vue.extend({
       title: this.$i18n.t('full_title').toString()
     };
   },
-  async asyncData() {
+  async asyncData({ i18n }) {
     return {
-      products: {}
+      products: i18n.locale == 'fr' ? ProductsFr : ProductsEn
     };
   },
-
-  mounted() {
-    this.$data.products = this.$i18n.locale == 'fr' ? ProductsFr : Products
-  }
 });
 </script>
 
