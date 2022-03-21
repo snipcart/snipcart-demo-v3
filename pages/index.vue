@@ -13,7 +13,6 @@
 
 <script lang="ts">
 import Vue from "vue";
-import i18n from 'vue-i18n';
 import Header from "~/components/Header.vue";
 import Notice from "~/components/Notice.vue";
 import Product from "~/components/Product.vue";
