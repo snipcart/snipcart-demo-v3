@@ -13,7 +13,7 @@
             :data-item-image="product.image"
             :data-item-name="product.name"
             v-bind="planData"
-            >Subscribe
+            >{{$t('subscribe')}}
         </button>
 </div>
 </template>

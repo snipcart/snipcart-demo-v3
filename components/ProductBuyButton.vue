@@ -1,7 +1,7 @@
 <template>
     <div class="product__summary">
         <div>
-            <label for="quantity">QUANTITY</label>
+            <label for="quantity">{{$t('quantity')}}</label>
             <input
             type="number"
             name="quantity"
@@ -12,10 +12,10 @@
             />
         </div>
         <div>
-          <label for="format">FORMAT</label>
+          <label for="format">{{$t('format')}}</label>
           <select name="format" id="format" @change="changeFormat">
-            <option value="physical">Physical copy</option>
-            <option value="digital">Digital copy (.jpg)</option>
+            <option value="physical">{{$t('physical_copy')}}</option>
+            <option value="digital">{{$t('digital_copy')}}</option>
           </select>
         </div>
         
@@ -30,7 +30,7 @@
             :data-item-image="product.image"
             :data-item-name="product.name"
             :data-item-quantity="quantity"
-            >Add to cart</button>
+            >{{$t('add_to_cart')}}</button>
         <button
           :class="'product__button snipcart-add-item ' + digitalButtonClasses"
           :data-item-id="`${product.id}-digital`"
@@ -41,7 +41,7 @@
           :data-item-name="`${product.name} (.jpg)`"
           :data-item-quantity="quantity"
           :data-item-file-guid="product.fileGuid"
-        >Add to cart</button>
+        >{{$t('add_to_cart')}}</button>
 </div>
 </template>
 
