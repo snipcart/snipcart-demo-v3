@@ -17,27 +17,11 @@ export default {
       },
     ],
     link: [
-      { rel: "preconnect", href: "https://app.snipcart.com" },
-      { rel: "preconnect", href: "https://cdn.snipcart.com" },
       { rel: "preconnect", href: "https://fonts.googleapis.com/css?family=Muli:400,700&display=swap" },
       { rel: "icon", type: "image/png", href: "/favicon.png" },
       {
         rel: "stylesheet",
-        href:
-          "https://fonts.googleapis.com/css?family=Muli:400,700&display=swap",
-      },
-      { rel: "preconnect", href: "https://app.snipcart.com" },
-      { rel: "preconnect", href: "https://cdn.snipcart.com" },
-      {
-        rel: "stylesheet",
-        href: "https://cdn.snipcart.com/themes/v3.0/default/snipcart.css",
-        defer: true
-      },
-    ],
-    script: [
-      { 
-        src: "https://cdn.snipcart.com/themes/v3.0/default/snipcart.js", 
-        defer: true, 
+        href:"https://fonts.googleapis.com/css?family=Muli:400,700&display=swap",
       },
     ],
   },
