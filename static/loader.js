@@ -1,6 +1,6 @@
 window.SnipcartSettings = {
   publicApiKey: "MzMxN2Y0ODMtOWNhMy00YzUzLWFiNTYtZjMwZTRkZDcxYzM4",
-  loadingStrategy: "on-user-interaction",
+  loadStrategy: "on-user-interaction",
   modalStyle: "side",
 };
 
