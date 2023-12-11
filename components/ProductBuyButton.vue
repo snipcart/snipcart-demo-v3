@@ -30,6 +30,10 @@
             :data-item-image="product.image"
             :data-item-name="product.name"
             :data-item-quantity="quantity"
+            :data-item-weight="product.weight"
+            :data-item-length="product.length"
+            :data-item-width="product.width"
+            :data-item-height="product.height"
             >{{$t('add_to_cart')}}</button>
         <button
           :class="'product__button snipcart-add-item ' + digitalButtonClasses"

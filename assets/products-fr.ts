@@ -12,6 +12,10 @@ const Products: Product[] = [
     image: "/images/starry-night.jpg",
     fileGuid: "09e589c7-3d18-4c2e-9cee-4f447e9f054a",
     plans: [],
+    weight: 10,
+    length: 30,
+    width: 5,
+    height: 20,
   },
   {
     id: "demo-magazine-subscription",
@@ -35,6 +39,10 @@ const Products: Product[] = [
       name: 'Abonnement hebdomadaire',
       price: 10
     }],
+    weight: 5,
+    length: 20,
+    width: 3,
+    height: 20,
   },
   {
     id: "demo-rosy",
@@ -47,6 +55,10 @@ const Products: Product[] = [
     image: "/images/rosy.jpg",
     fileGuid: "98dbd416-159d-4f76-8a59-30703cf6189f",
     plans: [],
+    weight: 10,
+    length: 30,
+    width: 5,
+    height: 20,
   },
   {
     id: "demo-irises",
@@ -59,6 +71,10 @@ const Products: Product[] = [
     image: "/images/irises.jpg",
     fileGuid: "66edfe7f-0851-4418-93e8-785975df7318",
     plans: [],
+    weight: 10,
+    length: 30,
+    width: 5,
+    height: 20,
   },
   {
     id: "demo-almond",
@@ -71,6 +87,10 @@ const Products: Product[] = [
     image: "/images/almond.jpg",
     fileGuid: "79b1504d-9127-4e7f-bcdb-dff84a337775",
     plans: [],
+    weight: 10,
+    length: 30,
+    width: 5,
+    height: 20,
   },
 ]
 

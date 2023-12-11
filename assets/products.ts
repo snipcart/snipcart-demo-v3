@@ -6,6 +6,10 @@ export interface Product {
   image: string,
   fileGuid?: string,
   plans: ProductPlan[],
+  weight: number | null,
+  length: number | null,
+  width: number | null,
+  height: number | null,
 }
 
 export interface ProductPlan {

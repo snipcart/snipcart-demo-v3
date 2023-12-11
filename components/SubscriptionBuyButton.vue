@@ -12,6 +12,10 @@
             :data-item-description="product.description"
             :data-item-image="product.image"
             :data-item-name="product.name"
+            :data-item-weight="product.weight"
+            :data-item-length="product.length"
+            :data-item-width="product.width"
+            :data-item-height="product.height"
             v-bind="planData"
             >{{$t('subscribe')}}
         </button>
